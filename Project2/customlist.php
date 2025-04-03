@@ -20,6 +20,7 @@ $result = $connection->query(query: $sql);
       <tr>
         <th scope="col">Id</th>
         <th scope="col">Name</th>
+        <th scope="col">Role</th>
         <th scope="col">Action</th>
 
       </tr>
@@ -32,7 +33,7 @@ $result = $connection->query(query: $sql);
           <td><?php echo $user['username']; ?></td>
           <td><?php echo $user['role']; ?></td>
 
-          <td><a href="?id=<?php echo $row['id']; ?>" class="btn btn-info">View</a>
+          <td><a href="viewcustom.php?id=<?php echo $row['id']; ?>" class="btn btn-info">View</a>
           </td>
         </tr>
       <?php } ?>
