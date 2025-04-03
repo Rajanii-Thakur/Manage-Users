@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     if (!empty($username) && !empty($rolee)) {
-        $connection->query("UPDATE myuser SET name='$username', role='$rolee' WHERE id=$id");
+        $connection->query("UPDATE myuser SET username='$username', role='$rolee' WHERE id=$id");
         //echo "<p>User updated successfully!</p>";
     }else {
         echo "<p>All fields are required!</p>";
