@@ -9,21 +9,11 @@ if (empty($id)) {
 } else {
     //echo $id;
 }
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['name'];
-    $rolee = $_POST['role'];
+$result = $connection->query("SELECT * FROM myuser WHERE id = $id");
+$user = $result->fetch_assoc();
 
-    $sql = "UPDATE myuser SET username='$username' WHERE id ='$id'";
-    $result = $connection->query(query: $sql);
-    $user = $result->fetch_assoc();
 
-    if(!empty('name')) {
-        echo "Record Updated.";
-    } else {
-        echo "Record Not Updated";
-    }
-}
-
+   
 
 ?>
 
@@ -33,14 +23,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>user update</title>
+    <title>customer view</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 </head>
 
 <body>
     <div class="container mt-4">
-        <h2>Update User</h2>
+        <h2>User Details</h2>
         <form method="POST">
             <div class="mb-3">
                 <label class="form-label">Name</label>
@@ -50,8 +40,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label class="form-label">Role</label>
                 <input type="text" name="role" class="form-control" value="<?php echo $user['role']; ?>">
             </div>
-            <button type="submit" class="btn btn-success"> <a href="userlist.php" class="text-decoration-none text-white"> Update</a></button>
-            <a href="userlist.php" class="btn btn-secondary">Cancel</a>
+            <button type="submit" class="btn btn-success"> <a href="userlist.php" class="text-decoration-none text-white">Back</a></button>
+            
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
