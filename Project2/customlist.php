@@ -33,7 +33,7 @@ $result = $connection->query(query: $sql);
           <td><?php echo $user['username']; ?></td>
           <td><?php echo $user['role']; ?></td>
 
-          <td><a href="?id=<?php echo $row['id']; ?>" class="btn btn-info">View</a>
+          <td><a href="viewcustom.php?id=<?php echo $row['id']; ?>" class="btn btn-info">View</a>
           </td>
         </tr>
       <?php } ?>
