@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<p>All fields are required!</p>";
     }
 }
-
+}
 
 ?>
 
