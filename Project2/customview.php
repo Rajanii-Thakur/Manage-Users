@@ -27,11 +27,11 @@ $user = $result->fetch_assoc();
 <body>
     <div class="container mt-4">
         <h2>User Details</h2>
-               <span><?php echo $user['username']; ?></span>
+               <span>Name:<?php echo $user['username']; ?></span>
            
-                 <span><?php echo $user['role']; ?></span>
+                 <span> Role:<?php echo $user['role']; ?></span>
             </div>
-         <a href="userlist.php" class="text-decoration-none text-white">Back</a>
+         <a href="userlist.php" class="">Back</a>
             </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
