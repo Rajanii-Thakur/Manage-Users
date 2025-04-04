@@ -1,6 +1,6 @@
 <?php
-include 'header.php';
-
+include 'function.php';
+getHeader();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,4 +55,6 @@ include 'header.php';
   </div>
   </div>
   </div>
-  <?php include 'footer.php'; ?>
+  <?php
+  include 'function.php';
+  getFooter(); ?>

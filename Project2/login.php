@@ -1,6 +1,8 @@
 <?php
 session_start();
 include "connect.php";
+include 'function.php';
+getHeader();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
@@ -49,4 +51,5 @@ Not registered??<a href="signup.php" class="text-info">Add New User Click Here</
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>
 <?php
-include'footer.php';?>
+include 'function.php';
+getFooter();?>

@@ -11,10 +11,6 @@ if (empty($id)) {
 }
 $result = $connection->query("SELECT * FROM myuser WHERE id = $id");
 $user = $result->fetch_assoc();
-
-
-   
-
 ?>
 
 <!DOCTYPE html>
@@ -31,19 +27,12 @@ $user = $result->fetch_assoc();
 <body>
     <div class="container mt-4">
         <h2>User Details</h2>
-        <form method="POST">
-            <div class="mb-3">
-                <label class="form-label">Name</label>
-                <input type="text" name="name" class="form-control" value="<?php echo $user['username']; ?>">
+               <span><?php echo $user['username']; ?></span>
+           
+                 <span><?php echo $user['role']; ?></span>
             </div>
-            <div class="mb-3">
-                <label class="form-label">Role</label>
-                <input type="text" name="role" class="form-control" value="<?php echo $user['role']; ?>">
+         <a href="userlist.php" class="text-decoration-none text-white">Back</a>
             </div>
-            <button type="submit" class="btn btn-success"> <a href="userlist.php" class="text-decoration-none text-white">Back</a></button>
-            
-        </form>
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

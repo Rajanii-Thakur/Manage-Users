@@ -17,19 +17,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $connection->query(query: $sql);
     $user = $result->fetch_assoc();
 
-<<<<<<< HEAD
     if(!empty('name')) {
         echo "Record Updated.";
     } else {
         echo "Record Not Updated";
-=======
+
 
     if (!empty($username) && !empty($rolee)) {
         $connection->query("UPDATE myuser SET username='$username', role='$rolee' WHERE id=$id");
         //echo "<p>User updated successfully!</p>";
     }else {
         echo "<p>All fields are required!</p>";
->>>>>>> 12bb5fdb19129ed0b45d6081325029bf12294aed
     }
 }
 
@@ -65,9 +63,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-<<<<<<< HEAD
-
 </html>
-=======
-</html>
->>>>>>> 12bb5fdb19129ed0b45d6081325029bf12294aed
